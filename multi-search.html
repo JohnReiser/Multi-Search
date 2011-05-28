@@ -1,0 +1,133 @@
+<!--
+	Copyright 2011 John Reiser, email?
+	
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<title>Multi-Search</title>
+	<style type="text/css">
+		form {padding:0; margin:0;}
+	</style>	
+	
+	<script type="text/javascript">
+	<!--
+		
+		function wikipedia(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value; 		
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + " http://en.wikipedia.org/wiki/"  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}
+	
+		function google(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://www.google.com/search?q="  + f + "' width='100%' height=" + ifHeight +"></iframe>"
+		}
+		
+		function bing(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://www.bing.com/search?q="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}		
+		
+		function clusty(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://clusty.com/search?input-form=clusty-simple&v%3Asources=webplus&query="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}	
+		
+		function wolfram(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://www.wolframalpha.com/input/?i="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}	
+
+		function delicious(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://delicious.com/search?p="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}
+	
+		/*
+		function twitter(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://search.twitter.com/search?q="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}
+		*/
+				
+		function ebay(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://shop.ebay.com/?_from=R40&_trksid=p3907.m38.l1313&_nkw="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}	
+		
+		function amazon(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://www.amazon.com/s/ref=nb_ss_gw?url=search-alias%3Daps&field-keywords="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}	
+
+		function craigslist(form){
+			//document.getElementById("top").innerHTML ="";
+  			var f = form.input.value;  
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://raleigh.craigslist.org/search/sss?query="  + f +   "' width='100%' height=" + ifHeight +"></iframe>"
+		}	
+		
+		function googleSets(form){
+			//document.getElementById("top").innerHTML ="";
+	  		var f = form.input.value; 
+			var s = "";
+			for(var i=0; i<f.length; i++){
+				if(f.charAt(i) != " "){s = s + f.charAt(i)}
+				else{s = s + "&q2="}
+			}
+			document.getElementById("content").innerHTML = "<iframe id='test' src ='" + "http://labs.google.com/sets?hl=en&q1="  + s +   "' width='100%' height='500'></iframe>";
+
+		}
+		//-->
+	</script>	
+</head>
+<body onload = 'ifHeight= window.innerHeight-15';  onresize = 'ifHeight = window.innerHeight-15';	>
+
+<div id="form">
+	<form>
+		<input name="input" value="" maxlength="2000" size=22>
+		<input name="calc" value="Google" type=BUTTON onClick=google(this.form)>
+		<input name="calc" value="bing" type=BUTTON onClick=bing(this.form)>	
+		<input name="calc" value="Wikipedia" type=BUTTON onClick=wikipedia(this.form)>
+		<input name="calc" value="Clusty" type=BUTTON onClick=clusty(this.form)>
+		<input name="calc" value="Wlfrm|Alph" type=BUTTON onClick=wolfram(this.form)>
+		<input name="calc" value="delicious" type=BUTTON onClick=delicious(this.form)>
+		<input name="calc" value="eBay" type=BUTTON onClick=ebay(this.form)>
+		<input name="calc" value="amazon" type=BUTTON onClick=amazon(this.form)>
+		<input name="calc" value="craigslist" type=BUTTON onClick=craigslist(this.form)>
+		<input name="calc" value="Google Sets" type=BUTTON onClick=googleSets(this.form)>
+	</form>
+</div>
+<div id = "content"><h1>You Rock! :-)</h1></div>	
+
+</body>
+</html>
+
+
+
+
+
