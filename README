@@ -1,5 +1,6 @@
 Multi-Search is a quick way to use multiple search engines. 
-It is an html/JavaScript file intended to be kept locally at this 
-point since it currently uses iFrames to display web searches.  
+It is a very simple html/JavaScript file but very practical.
+It is intended to be kept locally at this point since it 
+currently uses iFrames to display web searches.  
 
 This is my first project on github.
